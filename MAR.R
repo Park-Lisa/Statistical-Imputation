@@ -4,7 +4,8 @@ install.packages("NbClust")
 
 
 
-#split 7:3 in test/train set data<-read.csv(file="C:/data/boston.csv",header = T)
+#split 7:3 in test/train set 
+#data<-read.csv(file="C:/data/boston.csv",header = T)
 library(caret)
 inTrain <- createDataPartition(y=rawdata$MEDV, p=0.7, list=FALSE)
 training <- rawdata[inTrain,]
@@ -29,7 +30,7 @@ data1$RAD<-training[,13]
 
 
 
-#MAR (Missing at Random)imputation 
+#MAR (Missing at Random) imputation 
 for (i in 1:356){
   if (u[i]<0) {data
     1$LSTAT[i]<-NA 
