@@ -1,3 +1,6 @@
+# 6 different statistical imputationa methods (Hotdeck, MIIC, Stochastic regression, Complete case analysis, Regression)
+# applying to Boston House Price data
+
 download.packages("DMwR")
 library(DMwR)
 
@@ -62,7 +65,7 @@ test_predict<-predict(model.sr, test)
 eval4<-regr.eval(test$MEDV, test_predict)
 
 
-#complete case
+#complete case analysis
 train5<-train
 train5<-train5[!(is.na(missing$RM)), ]
 model.cc<-lm(MEDV~.,data=train5)
